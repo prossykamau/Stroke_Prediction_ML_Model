@@ -23,4 +23,47 @@ The project employs several classification algorithms to predict stroke risk. Th
 
 The performance of the models is evaluated using metrics such as precision, recall, f1-score, and accuracy. The results indicate high accuracy in predicting non-stroke cases but highlight challenges in accurately predicting stroke occurrences due to class imbalance.
 
-![alt text](Images/correlation_matrix.PNG)
+**Conclusion**
+
+The developed models show promising results in predicting stroke risk, particularly for non-stroke cases. However, further work is needed to improve prediction accuracy for stroke cases, potentially through techniques like class balancing, feature engineering, and exploring more complex algorithms.
+
+**Getting Started**
+
+Prerequisites
+
+Python 3.6 
+Anaconda 
+Jupyter
+Git Bash
+VS code
+
+Installation
+
+   1. Clone the repository
+
+git clone https://github.com/prossykamau/Stroke-Prediction-Model
+
+2. **Navigate to the project directory:**
+cd stroke-prediction-model
+
+3. **Create and activate a virtual environment:**
+python -m venv env
+source env/bin/activate  # On Windows use `env\Scripts\activate`
+4. **Install the required packages:**
+pip install -r requirements.txt
+
+**Usage**
+1. **Run the Jupyter Notebook:**
+jupyter notebook
+
+2. **Open the stroke_prediction.ipynb notebook and follow the steps to preprocess data, train models, and evaluate performance.**
+
+**Help**
+If you encounter any issues or have questions, feel free to reach out via email at prossykamau@gmail.com.
+
+Maintainers
+Prossy Nansubuga Kamau
+
+
+
+

@@ -23,4 +23,4 @@ The project employs several classification algorithms to predict stroke risk. Th
 
 The performance of the models is evaluated using metrics such as precision, recall, f1-score, and accuracy. The results indicate high accuracy in predicting non-stroke cases but highlight challenges in accurately predicting stroke occurrences due to class imbalance.
 
-![alt text](Images/correlation_matrix.png)
+![alt text](Images/correlation_matrix.PNG)

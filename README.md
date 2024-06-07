@@ -133,6 +133,8 @@ Evaluation of Models for Stroke Detection Dataset
 Models Used:
 **Logistic Regression**
 **Decision Tree Classifier**
+**Random Forest Model**
+**Gradient Boosting Model**
 
 **Analysis and Comparison:**
 
@@ -146,9 +148,33 @@ Precision, recall, and F1-score for predicting strokes (class 1) are all 0.0, in
 Achieved an accuracy of 91.8%, with slightly better precision and recall than logistic regression.
 Precision for class 1 (stroke) is low at 0.085, indicating that the model incorrectly predicted many non-strokes as strokes. Recall is also low at 0.095, showing that the model missed a significant number of actual stroke cases. The ROC AUC score of 0.525 indicates marginal ability to distinguish between positive and negative cases.
 
+**Evaluation of Tuned Random Forest Model**
+Analysis:
+The tuned **Random Forest model** shows the same performance metrics as the Logistic Regression and Decision Tree models previously evaluated. Specifically:
+
+Precision, recall, and F1-score for predicting strokes (class 1) are all 0.0, indicating that the model did not correctly identify any stroke cases.
+The ROC AUC score of 0.5 confirms that the model's predictions are no better than random guessing.
+The accuracy of 95.7% is high but misleading due to the dataset's imbalance.
+
+**Evaluation of Gradient Boosting Model**
+The **Gradient Boosting model** performs slightly better than the best Random Forest model:
+
+Precision for predicting strokes (class 1) is 0.167, indicating that when it predicts a stroke, it is correct 16.7% of the time.
+
+Recall is very low at 0.024, indicating that the model identified only a few of the actual stroke cases.
+
+F1-score is also low at 0.042, reflecting the model's poor performance in correctly identifying stroke cases.
+
+The ROC AUC score of 0.509 indicates that the model's predictions are not much better than random guessing.
+
 **Recommendations:**
 1. Address class imbalance: Use techniques such as oversampling (e.g., SMOTE) or undersampling to balance the dataset.
 2. Feature engineering: Explore additional features or transformations that may improve predictive power.
 3. Model selection: Consider other algorithms better suited for imbalanced datasets, such as ensemble methods (e.g., Random Forests, Gradient Boosting).
 4. Hyperparameter tuning: Optimize model parameters to improve performance metrics.
 5. Additional data collection: Gather more data to improve model training and generalization.
+
+**k-Nearest Neighbors classifier**
+The model performs very well in predicting class 0 (likely not having a stroke), with high precision (0.95), recall (1.00), and F1-score (0.97). However, the model performs poorly in predicting class 1 (likely having a stroke), with very low precision (0.00), recall (0.00), and F1-score (0.00). The overall accuracy of the model is 0.95, indicating that it correctly predicts the majority class (class 0) most of the time. The macro average F1-score is 0.49, and the weighted average F1-score is 0.92, reflecting the overall performance across both classes.
+
+Conclusion: While the model performs very well in predicting the majority class (0), it fails to effectively predict the minority class (1). This imbalance suggests that the model may need further tuning, class rebalancing, or additional feature engineering to improve its ability to predict strokes accurately. Further investigation into feature importance and model tuning is recommended to enhance the model's performance on predicting strokes effectively.
